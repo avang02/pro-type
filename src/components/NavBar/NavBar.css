@@ -1,0 +1,21 @@
+.navbar {
+    display: flex;
+    flex-direction: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.welcome {
+    font-family: "Ubuntu Sans Mono", monospace;
+    background-color: #0E0E0E;
+    color: azure;
+    font-size: 3vmin;
+}
+
+.logout {
+    font-family: "Ubuntu Sans Mono", monospace;
+    background-color: #0E0E0E;
+    color: azure;
+    text-decoration: none;
+}

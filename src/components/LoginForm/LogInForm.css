@@ -1,0 +1,21 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-input {
+    font-family: "Ubuntu Sans Mono", monospace;
+}
+
+.login-btn {
+    font-family: "Ubuntu Sans Mono", monospace;
+    background-color: rgba(0, 0, 0, 0.945);
+    color: azure;
+}

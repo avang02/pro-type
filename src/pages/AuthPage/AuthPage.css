@@ -1,0 +1,85 @@
+body {
+  background-color: rgba(0, 0, 0, 0.945);
+}
+
+.title {
+  font-family: "Ubuntu Sans Mono", monospace;
+  color: azure;
+  display: flex;
+  justify-content: center;
+}
+
+.login-nav {
+  font-family: "Ubuntu Sans Mono", monospace;
+  color: azure;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-login {
+  width: 20vmin;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button-login > button {
+  font-family: "Ubuntu Sans Mono", monospace;
+  background-color: rgba(0, 0, 0, 0.945);
+  color: azure;
+}
+
+#type-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ubuntu Sans Mono", monospace;
+  color: azure;
+}
+#quote {
+  width: 100vmin;
+  display: flex;
+  flex-direction: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 3vmin;
+  margin-bottom: 5vmin;
+}
+#quote > div {
+  height: 3vmin;
+}
+.quote-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vmin;
+  width: 50vmin;
+  height: 3vmin;
+}
+.game-btn {
+  margin-top: 2vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 12vmin;
+  font-family: "Ubuntu Sans Mono", monospace;
+  background-color: rgba(0, 0, 0, 0.945);
+  color: azure;
+}
+
+#main-game-content {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main-game-content > p {
+  height: 3vmin;
+  margin-top: 0;
+  margin-bottom: 0;
+}
