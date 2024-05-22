@@ -3,8 +3,9 @@ import './GameMenu.css'
 import { createTypeTest, getAllTypeTest } from '../../utilities/typingtest-api';
 import { update } from '../../utilities/users-service';
 import Quote from '../Quote/Quote';
+import NavBar from '../NavBar/NavBar';
 
-export default function GameMenu({user}) {
+export default function GameMenu({user, setUser}) {
   const [newUser, setNewUser] = useState(user);
   const [quote, setQuote] = useState("");
   const [wpm, setWpm] = useState(0);
@@ -182,23 +183,24 @@ export default function GameMenu({user}) {
     }
   }
 
-    return (
-        <>
-            <div id='type-game'>
-                <div id='quote'>
-                  {newQuote.map((word, idx) => (
-                    <Quote word={word} idx={idx} key={idx} />
-                  ))}
-                </div>
-                <div id="main-game-content">
-                  <p>WPM: {parseInt(wpm)}</p>
-                  <p>Accuracy: {parseFloat(accuracy).toFixed(2)}</p>
-                  <p>Points: {points}</p>
-                </div>
-                <input type="text" onChange={handleChange}/>
-                <button id="play-again" onClick={handleButtonClick}>Type again?</button>
-            </div>
-        </>
-    )
+  return (
+    <main className="gamemenu-main">
+      <NavBar user={user} setUser={setUser}/>
+      <div id='type-game'>
+        <div id='quote'>
+          {newQuote.map((word, idx) => (
+            <Quote word={word} idx={idx} key={idx} />
+          ))}
+        </div>
+        <div id="main-game-content">
+          <p>WPM: {parseInt(wpm)}</p>
+          <p>Accuracy: {parseFloat(accuracy).toFixed(2)}</p>
+          <p>Points: {points}</p>
+        </div>
+        <input type="text" onChange={handleChange}/>
+        <button id="play-again" onClick={handleButtonClick}>Type again?</button>
+      </div>
+    </main>
+  )
 }
 

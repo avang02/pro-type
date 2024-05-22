@@ -125,7 +125,7 @@ export default function AuthPage({ setUser }) {
         </div>
       </nav>
       <br /><br /><br />
-      <div id='type-game'>
+      <div id="type-game-auth">
         <div id="quote">
             {newQuote.map((word, idx) => (
               <Quote word={word} idx={idx} key={idx}/>

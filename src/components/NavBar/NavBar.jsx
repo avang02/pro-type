@@ -10,7 +10,7 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav className='navbar'>
-      <span className='welcome'>Welcome, {user.name}</span>
+      <span className='welcome'>Welcome, <Link id="dashboard-link" to="/dashboard">{user.name}</Link></span>
       &nbsp; | &nbsp;
       <Link className='logout' to="" onClick={handleLogOut}>Log Out</Link>
     </nav>

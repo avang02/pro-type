@@ -1,4 +1,11 @@
+.gamemenu-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #type-game {
+    height: 80vmin;
     display: flex;
     flex-direction: column;
     font-family: "Ubuntu Sans Mono", monospace;

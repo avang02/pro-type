@@ -1,4 +1,4 @@
-import GameMenu from "../../components/GameMenu/GameMenu"
+import { Link } from "react-router-dom"
 import NavBar from "../../components/NavBar/NavBar"
 import './Dashboard.css'
 
@@ -12,7 +12,9 @@ export default function Dashboard({user, setUser}) {
                 <p>WPM: {user.wpm}</p>
                 <p>Accuracy: {user.accuracy}%</p>
                 <p>Points: {user.points}</p>
-                <GameMenu user={user}/>
+            </div>
+            <div className="btn-div">
+                <Link to="/typetest"><button id="typetest-btn">TypeTest</button></Link>
             </div>
         </>
     )

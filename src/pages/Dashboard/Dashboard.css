@@ -6,3 +6,15 @@
     font-family: "Ubuntu Sans Mono", monospace;
     color: azure;
 }
+
+#dashboard-link {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-div {
+    display: flex;
+    flex-direction: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -30,7 +30,7 @@ body {
   color: azure;
 }
 
-#type-game {
+#type-game-auth {
   display: flex;
   flex-direction: column;
   justify-content: center;
