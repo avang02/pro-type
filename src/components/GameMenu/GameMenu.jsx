@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import './GameMenu.css'
 import { createTypeTest, getAllTypeTest } from '../../utilities/typingtest-api';
-import { update } from '../../utilities/users-service';
+import {  update } from '../../utilities/users-service';
 import Quote from '../Quote/Quote';
 import NavBar from '../NavBar/NavBar';
 
@@ -130,7 +130,6 @@ export default function GameMenu({user, setUser}) {
   }
 
   async function createGame(typetestdata) {
-    console.log(typetestdata)
     try{
       await createTypeTest(typetestdata, newUser._id);
       console.log("Typetest created successfully!");
@@ -185,6 +184,7 @@ export default function GameMenu({user, setUser}) {
     try {
       const updatedUser = await update(newUserData, newUser._id);
       setNewUser(updatedUser);
+      console.log("tryblock works");
     } catch (err) {
       console.log("Error updating user: ", err);
     }

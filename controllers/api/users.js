@@ -48,6 +48,7 @@ async function update(req, res) {
       accuracy: req.body.accuracy,
       points: req.body.points
     })
+    console.log(user)
     if (!user) {
       return res.statue(404).json({error: "No user found"});
     }

@@ -20,8 +20,7 @@ export async function login(credentials) {
 }
 
 export function logOut() {
-  // localStorage.removeItem('token');
-  localStorage.clear();
+  localStorage.removeItem('token');
 }
 
 export async function update(newData, userId) {
