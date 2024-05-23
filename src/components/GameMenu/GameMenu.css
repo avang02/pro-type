@@ -8,6 +8,8 @@
     height: 80vmin;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 10vmin;
     font-family: "Ubuntu Sans Mono", monospace;
     color: azure;
 }
@@ -15,4 +17,8 @@
 #quote {
     font-family: "Ubuntu Sans Mono", monospace;
     color: azure;
+}
+
+#play-again {
+    width: 10vmin;
 }

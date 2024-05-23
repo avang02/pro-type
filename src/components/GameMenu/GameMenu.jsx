@@ -130,10 +130,17 @@ export default function GameMenu({user, setUser}) {
   }
 
   async function createGame(typetestdata) {
+    console.log(typetestdata)
     try{
-        await createTypeTest(typetestdata, newUser._id);
+      await createTypeTest(typetestdata, newUser._id);
+      console.log("Typetest created successfully!");
     } catch (err) {
+      if (err instanceof SyntaxError) {
+        console.log("Received non-JSON response. Assuming success.");
+        // Handle non-JSON response gracefully, if needed
+      } else {
         console.log("Error creating typetest: ", err)
+      }
     }
   }
 

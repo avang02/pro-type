@@ -6,9 +6,7 @@
 import * as usersAPI from './users-api';
 
 export async function signUp(userData) {
-  console.log(userData)
   const token = await usersAPI.signUp(userData);
-  console.log(token)
   localStorage.setItem('token', token);
   return getUser('token');
 }
@@ -16,9 +14,7 @@ export async function signUp(userData) {
 export async function login(credentials) {
   // Delegate the AJAX request to the users-api.js
   // module.
-  console.log(credentials)
   const token = await usersAPI.login(credentials);
-  console.log(token)
   localStorage.setItem('token', token);
   return getUser('token');
 }
@@ -37,11 +33,9 @@ export async function update(newData, userId) {
 export function getToken() {
   // getItem will return null if the key does not exists
   const token = localStorage.getItem('token');
-  console.log(token)
   if (!token) return null;
   const payload = JSON.parse(atob(token.split('.')[1]));
   // A JWT's exp is expressed in seconds, not miliseconds
-  console.log(payload)
   if (payload.exp * 1000 < Date.now()) {
     // Token has expired
     localStorage.removeItem('token');

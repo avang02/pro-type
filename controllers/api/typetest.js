@@ -11,6 +11,7 @@ module.exports = {
 };
 
 async function create(req, res) {
+    console.log(req.body)
     try {
         const typetest = await TypeTest.create({
             user: req.body.user,
@@ -21,8 +22,9 @@ async function create(req, res) {
             accuracy: req.body.accuracy,
             points: req.body.points
         });
+        console.log(typetest)
         await typetest.save();
-        res.sendStatus(200);
+        res.status(201).send("Typetest created successfully.");
     } catch (err) {
         res.status(400).json(err);
     }
